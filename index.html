@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SugarRush Candies | Premium Candy Company</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#ff4d6d;
+      --secondary:#ffd166;
+      --dark:#1f1f1f;
+      --light:#ffffff;
+      --bg:#fff7f9;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--dark);
+      line-height:1.6;
+    }
+
+    /* ================= HEADER ================= */
+    header{
+      background:linear-gradient(135deg, var(--primary), #ff85a1);
+      color:#fff;
+      padding:20px 80px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    .logo span{
+      color:var(--secondary);
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:30px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:#fff;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:var(--secondary);
+    }
+
+    /* ================= HERO ================= */
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      padding:80px;
+    }
+
+    .hero-text h1{
+      font-size:52px;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      font-size:18px;
+      margin-bottom:30px;
+      max-width:500px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 32px;
+      background:var(--primary);
+      color:#fff;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#e63b5c;
+      transform:translateY(-2px);
+    }
+
+    .hero-img img{
+      width:100%;
+      max-width:420px;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{ transform:translateY(0); }
+      50%{ transform:translateY(-15px); }
+    }
+
+    /* ================= PRODUCTS ================= */
+    .section{
+      padding:80px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:36px;
+      margin-bottom:50px;
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .product-card{
+      background:#fff;
+      border-radius:20px;
+      padding:25px;
+      text-align:center;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .product-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .product-card img{
+      width:120px;
+      margin-bottom:20px;
+    }
+
+    .product-card h3{
+      margin-bottom:10px;
+    }
+
+    /* ================= ABOUT ================= */
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:20px;
+    }
+
+    /* ================= CONTACT ================= */
+    .contact{
+      background:linear-gradient(135deg, #ffe5ec, #fff);
+      border-radius:30px;
+      padding:50px;
+      max-width:800px;
+      margin:0 auto;
+    }
+
+    .contact input, .contact textarea{
+      width:100%;
+      padding:15px;
+      margin-bottom:20px;
+      border-radius:10px;
+      border:1px solid #ddd;
+      font-size:16px;
+    }
+
+    .contact button{
+      border:none;
+      cursor:pointer;
+    }
+
+    /* ================= FOOTER ================= */
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#1f1f1f;
+      color:#aaa;
+      margin-top:80px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media(max-width:900px){
+      .hero, .about{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      header, .hero, .section{
+        padding:40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <div class="logo">Sugar<span>Rush</span></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Premium Candies Made With Love 🍬</h1>
+      <p>We create colorful, delicious, and high-quality candies loved by kids and adults worldwide.</p>
+      <a href="#products" class="btn">Explore Products</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1582719478185-2f8c51e2b63c" alt="Candy">
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+    <h2 class="section-title">Our Best Sellers</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3082/3082035.png">
+        <h3>Fruit Gummies</h3>
+        <p>Soft, juicy, and bursting with fruity flavor.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3082/3082031.png">
+        <h3>Chocolate Bites</h3>
+        <p>Rich chocolate with a smooth creamy center.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3082/3082042.png">
+        <h3>Lollipops</h3>
+        <p>Colorful swirls of sweetness on every stick.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="about">
+      <div>
+        <h2 class="section-title" style="text-align:left">About SugarRush</h2>
+        <p>Since 2010, SugarRush has been delivering premium-quality candies made with natural flavors and love. Our mission is to spread happiness through sweetness.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1589712235274-8dbd93a06d43" alt="Candy Factory">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button class="btn">Send Message</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 SugarRush Candies. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
